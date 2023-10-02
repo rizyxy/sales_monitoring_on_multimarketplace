@@ -11,6 +11,7 @@ class Product(models.Model):
     online_shop = models.ForeignKey(OnlineShop, on_delete=models.CASCADE)
 
 class ProductHistory(models.Model):
+    date_time = models.DateTimeField(auto_now_add=True)
     review_count = models.IntegerField()
     rating = models.FloatField()
     sold_count = models.IntegerField()
